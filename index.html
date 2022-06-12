@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="./app.css">
+  <title>EVA 02</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <h4>2022-2B-PROGRAMACIÓN DE COMPONENTES DE ESCRITORIO/200-CED-ESPFT</h4>
+    <br>
+    <div class="row">
+      <div class="col-4">
+        <h5>Conexión con dispositivo</h5>
+        <div class="mb-3">
+          <label class="form-label">Puerto</label>
+          <select id="select_port" class="form-control"></select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Velocidad</label>
+          <select name="rate" id="select_rate" class="form-control">
+            <option value=7200>7200</option>
+            <option value=9600>9600</option>
+            <option value=14400>14400</option>
+            <option value=19200>19200</option>
+            <option value=38400>38400</option>
+            <option value=57600>57600</option>
+            <option value=115200>115200</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <button id="btn_conexion" class="btn btn-primary">Connectar</button>
+          <button id="btn_close_conexion" class="btn btn-primary">desconectar</button>
+        </div>
+        <br>
+        <div class="mb-3">
+          <label class="form-label">Enviar comandos</label>
+          <input type="text" id="command_input" class="form-control">
+          
+        </div>
+        <div class="mb-3">
+          <button id="btn_command" class="btn btn-primary">enviar</button>
+        </div>
+      </div>
+      <div class="col-8">
+        <h5>Status</h5>
+        <div class="mb-3">
+          <label class="form-label">puerto</label>
+          <input id="status_port_input" readonly="true" class="form-control">
+          <label class="form-label">velocidad</label>
+          <input id="status_rate_input" readonly="true" class="form-control">
+          <label class="form-label">conexión</label>
+          <input id="status_conexion_input" readonly="true" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Consola</label>
+          <div id="console_container" class="container console"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+</body>
+<script src="./index.js"></script>
+
+</html>
